@@ -12,7 +12,9 @@ namespace HigherLower
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Page1 : ContentPage
 	{
-		public Page1 ()
+        int score = 5;
+
+        public Page1 ()
 		{
             InitializeComponent ();
             randomNumber();
@@ -28,10 +30,19 @@ namespace HigherLower
             if (newNum > lastNum)
             {
                 statusLbl.Text = "You win";
+                score++;
+                scoreLbl.Text = "Lives: " + score.ToString();
+            }
+            else if(newNum == lastNum)
+            {
+                statusLbl.Text = "";
+                scoreLbl.Text = "Lives: " + score.ToString();
             }
             else
             {
                 statusLbl.Text = "You lose";
+                score--;
+                scoreLbl.Text = "Lives: " + score.ToString();
             }
         }
 
@@ -45,10 +56,20 @@ namespace HigherLower
             if(newNum < lastNum)
             {
                 statusLbl.Text = "You win";
+                score++;
+                scoreLbl.Text = "Lives: " + score.ToString();
+
+            }
+            else if (newNum == lastNum)
+            {
+                statusLbl.Text = "";
+                scoreLbl.Text = "Lives: " + score.ToString();
             }
             else
             {
                 statusLbl.Text = "You lose";
+                score--;
+                scoreLbl.Text = "Lives: " + score.ToString();
             }
         }
         private void randomNumber()

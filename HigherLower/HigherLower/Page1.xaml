@@ -44,11 +44,17 @@
             </StackLayout>
             <StackLayout HorizontalOptions="Center"
                          VerticalOptions="Center">
-                 <Label Text=""
+                <Label Text=""
                    TextColor="White"
                    FontSize="80"
                    FontAttributes="Bold"
                    x:Name="statusLbl"/>
+                <Label Text="Lives: 5"
+                       FontSize="25"
+                       Margin="100,0,100,25"
+                       FontAttributes="Bold"
+                       TextColor="LightGray"
+                       x:Name="scoreLbl"/>
             </StackLayout>
            
         </StackLayout>
