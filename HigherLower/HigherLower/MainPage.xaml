@@ -3,14 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:HigherLower"
              x:Class="HigherLower.MainPage"
-             BackgroundColor="FloralWhite">
+             BackgroundColor="LightSalmon">
 
     <StackLayout HorizontalOptions="CenterAndExpand"
                  VerticalOptions="CenterAndExpand">
         <Label Text="Higher Or Lower?"
-               FontSize="Large"
+               FontSize="60"
                FontAttributes="Bold"
-               TextColor="LightSalmon"/>
+               TextColor="White"/>
         <Button Text="Go"
                 TextColor="Navy"
                 FontSize="Large"

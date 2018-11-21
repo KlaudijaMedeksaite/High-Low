@@ -12,7 +12,9 @@
                        TextColor="PaleGoldenrod"/>
                 <Label Text="Guess if the next one is Higher or Lower!"
                        TextColor="PapayaWhip"/>
-                <Label Margin="100,0,0,0"
+            </StackLayout>
+            <StackLayout HorizontalOptions="Center">
+                <Label Margin="100,0,100,0"
                        x:Name="numDisplay"
                        FontSize="200"
                        Text="0"/>
@@ -28,7 +30,8 @@
                         BorderColor="AntiqueWhite"
                         BackgroundColor="AliceBlue"
                         CornerRadius="15"
-                        FontSize="Large"/>
+                        FontSize="Large"
+                        Clicked="higherBtn_Clicked"/>
                 <Button x:Name="lowerBtn"
                         Text="Lower" 
                         HeightRequest="100"
@@ -36,8 +39,18 @@
                         BorderColor="AntiqueWhite"
                         BackgroundColor="AliceBlue"
                          CornerRadius="15"
-                        FontSize="Large"/>
+                        FontSize="Large"
+                        Clicked="lowerBtn_Clicked"/>
             </StackLayout>
+            <StackLayout HorizontalOptions="Center"
+                         VerticalOptions="Center">
+                 <Label Text=""
+                   TextColor="White"
+                   FontSize="80"
+                   FontAttributes="Bold"
+                   x:Name="statusLbl"/>
+            </StackLayout>
+           
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
