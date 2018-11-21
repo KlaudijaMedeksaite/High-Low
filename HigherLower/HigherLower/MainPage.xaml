@@ -2,13 +2,24 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:HigherLower"
-             x:Class="HigherLower.MainPage">
+             x:Class="HigherLower.MainPage"
+             BackgroundColor="FloralWhite">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+    <StackLayout HorizontalOptions="CenterAndExpand"
+                 VerticalOptions="CenterAndExpand">
+        <Label Text="Higher Or Lower?"
+               FontSize="Large"
+               FontAttributes="Bold"
+               TextColor="LightSalmon"/>
+        <Button Text="Go"
+                TextColor="Navy"
+                FontSize="Large"
+                FontAttributes="Bold"
+                HeightRequest="100"
+                WidthRequest="200"
+                BorderColor="AliceBlue"
+                BackgroundColor="LightSteelBlue"
+                Clicked="Button_Clicked"/>
     </StackLayout>
 
 </ContentPage>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HigherLower.Page1"
+             BackgroundColor="LightSalmon">
+    
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="CenterAndExpand"
+                     VerticalOptions="CenterAndExpand">
+            <StackLayout HorizontalOptions="Center">
+                <Label Text="Random numbers are chosen between 0 and 20."
+                       TextColor="PaleGoldenrod"/>
+                <Label Text="Guess if the next one is Higher or Lower!"
+                       TextColor="PapayaWhip"/>
+                <Label Margin="100,0,0,0"
+                       x:Name="numDisplay"
+                       FontSize="200"
+                       Text="0"/>
+            </StackLayout>
+
+            <StackLayout HorizontalOptions="CenterAndExpand"
+                         VerticalOptions="CenterAndExpand"
+                         Orientation="Horizontal">
+                <Button x:Name="higherBtn"
+                        Text="Higher"
+                        HeightRequest="100"
+                        WidthRequest="150"
+                        BorderColor="AntiqueWhite"
+                        BackgroundColor="AliceBlue"
+                        CornerRadius="15"
+                        FontSize="Large"/>
+                <Button x:Name="lowerBtn"
+                        Text="Lower" 
+                        HeightRequest="100"
+                        WidthRequest="150"
+                        BorderColor="AntiqueWhite"
+                        BackgroundColor="AliceBlue"
+                         CornerRadius="15"
+                        FontSize="Large"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
