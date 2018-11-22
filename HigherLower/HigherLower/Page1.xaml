@@ -9,14 +9,21 @@
                      VerticalOptions="CenterAndExpand">
             <StackLayout HorizontalOptions="Center">
                 <Label Text="Random numbers are chosen between 0 and 20."
-                       TextColor="PaleGoldenrod"/>
+                       TextColor="PaleGoldenrod"
+                       HorizontalOptions="Center"/>
                 <Label Text="Guess if the next one is Higher or Lower!"
-                       TextColor="PapayaWhip"/>
+                       TextColor="PapayaWhip"
+                       HorizontalOptions="Center"/>
+                <Label Text="Level One"
+                       FontSize="Large"
+                       TextColor="White"
+                       HorizontalOptions="Center"
+                       FontAttributes="Bold"/>
             </StackLayout>
             <StackLayout HorizontalOptions="Center">
                 <Label Margin="100,0,100,0"
                        x:Name="numDisplay"
-                       FontSize="200"
+                       FontSize="150"
                        Text="0"/>
             </StackLayout>
 
@@ -53,7 +60,7 @@
                        FontSize="25"
                        Margin="100,0,100,25"
                        FontAttributes="Bold"
-                       TextColor="LightGray"
+                       TextColor="White"
                        x:Name="scoreLbl"/>
             </StackLayout>
            

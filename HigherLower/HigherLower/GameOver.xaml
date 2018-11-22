@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HigherLower.GameOver"
+             BackgroundColor="LightSalmon">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center"
+                     HorizontalOptions="Center">
+            <Label Text="GAME OVER"
+                   FontSize="100"
+                   Margin="20,0,20,0"/>
+            <Button x:Name="tryAgnBtn"
+                    Clicked="tryAgnBtn_Clicked"
+                    Text="Try again"
+                    HeightRequest="100"
+                    WidthRequest="130"
+                    BorderColor="AntiqueWhite"
+                    BackgroundColor="AliceBlue"
+                    CornerRadius="15"
+                    FontSize="Large"/>
+            <Button x:Name="bckToMenBtn"
+                    Clicked="bckToMenBtn_Clicked"
+                    Text="Back to Menu"
+                    HeightRequest="100"
+                    WidthRequest="130"
+                    BorderColor="AntiqueWhite"
+                    BackgroundColor="AliceBlue"
+                    CornerRadius="15"
+                    FontSize="Large"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

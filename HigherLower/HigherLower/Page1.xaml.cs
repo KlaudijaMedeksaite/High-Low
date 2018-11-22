@@ -35,7 +35,7 @@ namespace HigherLower
             }
             else if(newNum == lastNum)
             {
-                statusLbl.Text = "";
+                statusLbl.Text = "Go Again";
                 scoreLbl.Text = "Lives: " + score.ToString();
             }
             else
@@ -43,6 +43,11 @@ namespace HigherLower
                 statusLbl.Text = "You lose";
                 score--;
                 scoreLbl.Text = "Lives: " + score.ToString();
+            }
+
+            if (score == 0)
+            {
+                Navigation.PushAsync(new GameOver());
             }
         }
 
@@ -62,7 +67,7 @@ namespace HigherLower
             }
             else if (newNum == lastNum)
             {
-                statusLbl.Text = "";
+                statusLbl.Text = "Go Again";
                 scoreLbl.Text = "Lives: " + score.ToString();
             }
             else
@@ -70,6 +75,10 @@ namespace HigherLower
                 statusLbl.Text = "You lose";
                 score--;
                 scoreLbl.Text = "Lives: " + score.ToString();
+            }
+            if (score == 0)
+            {
+                Navigation.PushAsync(new GameOver());
             }
         }
         private void randomNumber()

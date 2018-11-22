@@ -9,8 +9,10 @@ namespace HigherLower
 {
     public partial class MainPage : ContentPage
     {
+        
         public MainPage()
         {
+            OnBackButtonPressed(); 
             InitializeComponent();
         }
 
@@ -18,5 +20,7 @@ namespace HigherLower
         {
             Navigation.PushAsync(new Page1());
         }
+
     }
+    
 }
