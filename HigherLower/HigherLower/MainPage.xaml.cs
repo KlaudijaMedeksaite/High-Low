@@ -12,7 +12,6 @@ namespace HigherLower
         
         public MainPage()
         {
-            OnBackButtonPressed(); 
             InitializeComponent();
         }
 

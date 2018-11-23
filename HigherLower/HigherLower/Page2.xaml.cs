@@ -10,13 +10,14 @@ using Xamarin.Forms.Xaml;
 namespace HigherLower
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class Page1 : ContentPage
+	public partial class Page2 : ContentPage
 	{
-        int score = 5;
 
-        public Page1 ()
-		{
-            InitializeComponent ();
+        int score = 3;
+
+        public Page2()
+        {
+            InitializeComponent();
             randomNumber();
         }
 
@@ -33,7 +34,7 @@ namespace HigherLower
                 score++;
                 scoreLbl.Text = "Lives: " + score.ToString();
             }
-            else if(newNum == lastNum)
+            else if (newNum == lastNum)
             {
                 statusLbl.Text = "Go Again";
                 scoreLbl.Text = "Lives: " + score.ToString();
@@ -49,9 +50,9 @@ namespace HigherLower
             {
                 Navigation.PushAsync(new GameOver());
             }
-            else if (score == 20)
+            else if (score == 50)
             {
-                Navigation.PushAsync(new Page2());
+                Navigation.PushAsync(new Page3());
             }
         }
 
@@ -62,7 +63,7 @@ namespace HigherLower
             randomNumber();
             int newNum = int.Parse(numDisplay.Text);
 
-            if(newNum < lastNum)
+            if (newNum < lastNum)
             {
                 statusLbl.Text = "You win";
                 score++;
@@ -84,18 +85,17 @@ namespace HigherLower
             {
                 Navigation.PushAsync(new GameOver());
             }
-            else if (score == 20)
+            else if (score == 50)
             {
-                Navigation.PushAsync(new Page2());
+                Navigation.PushAsync(new Page3());
             }
         }
         private void randomNumber()
         {
             //random number
             Random generator = new Random();
-            numDisplay.Text = generator.Next(0, 21).ToString();
+            numDisplay.Text = generator.Next(0, 51).ToString();
         }
-
         private void redoBtn_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new Page1());

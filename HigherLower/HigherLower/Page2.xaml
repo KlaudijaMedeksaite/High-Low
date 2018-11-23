@@ -1,23 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="HigherLower.Page1"
-             BackgroundColor="LightSalmon">
-    
+             x:Class="HigherLower.Page2"             
+             BackgroundColor="Tomato">
+
     <ContentPage.Content>
         <StackLayout HorizontalOptions="CenterAndExpand"
                      VerticalOptions="CenterAndExpand">
             <StackLayout HorizontalOptions="Center">
-                <Label Text="Random numbers are chosen between 0 and 20."
+                <Label Text="Random numbers are chosen between 0 and 50."
                        TextColor="PaleGoldenrod"
                        HorizontalOptions="Center"/>
                 <Label Text="Guess if the next one is Higher or Lower!"
                        TextColor="PapayaWhip"
                        HorizontalOptions="Center"/>
-                <Label Text="Level two once you reach 20 lives"
+                <Label Text="Level three once you reach 50 lives"
                        TextColor="Gainsboro"
                        HorizontalOptions="Center"/>
-                <Label Text="Level One"
+                <Label Text="Level Two"
                        FontSize="Large"
                        TextColor="White"
                        HorizontalOptions="Center"
@@ -59,26 +59,26 @@
                    FontSize="50"
                    FontAttributes="Bold"
                    x:Name="statusLbl"/>
-                <StackLayout Orientation="Horizontal"
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal"
                              HorizontalOptions="Center">
-                    <Label Text="Lives: 5"
+                <Label Text="Lives: 3"
                            FontSize="25"
                            VerticalOptions="Start"
                            HorizontalOptions="Center"
                            FontAttributes="Bold"
                            TextColor="White"
                            x:Name="scoreLbl"/>
-                    <Button Text="Redo"
+                <Button Text="Redo"
                             BackgroundColor="Gray"
                             TextColor="White"
                             x:Name="redoBtn"
                             Clicked="redoBtn_Clicked"
                             BorderColor="White"
                             CornerRadius="10"/>
-                </StackLayout>
-                
             </StackLayout>
-           
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
