@@ -4,13 +4,14 @@
              xmlns:local="clr-namespace:HigherLower"
              x:Class="HigherLower.MainPage"
              BackgroundColor="LightSalmon">
-
+<!-- Start Page --> 
     <StackLayout HorizontalOptions="CenterAndExpand"
                  VerticalOptions="CenterAndExpand">
         <Label Text="Higher Or Lower?"
                FontSize="40"
                FontAttributes="Bold"
                TextColor="White"/>
+        <!-- go button to go to level one-->
         <Button Text="Go"
                 BorderColor="AntiqueWhite"
                 BackgroundColor="AliceBlue"

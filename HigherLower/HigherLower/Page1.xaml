@@ -3,37 +3,42 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HigherLower.Page1"
              BackgroundColor="LightSalmon">
-    
-    <ContentPage.Content>
-        <StackLayout HorizontalOptions="CenterAndExpand"
-                     VerticalOptions="CenterAndExpand">
-            <StackLayout HorizontalOptions="Center">
-                <Label Text="Random numbers are chosen between 0 and 20."
+   <ContentPage.Content>
+       <!-- level one page-->
+        <AbsoluteLayout Padding="0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <StackLayout HorizontalOptions="Center"
+                         VerticalOptions="CenterAndExpand">
+                <StackLayout HorizontalOptions="Center">
+                    <!-- instructions of level -->
+                    <Label Text="Random numbers are chosen between 0 and 20."
                        TextColor="PaleGoldenrod"
                        HorizontalOptions="Center"/>
-                <Label Text="Guess if the next one is Higher or Lower!"
+                    <Label Text="Guess if the next one is Higher or Lower!"
                        TextColor="PapayaWhip"
                        HorizontalOptions="Center"/>
-                <Label Text="Level two once you reach 20 lives"
+                    <Label Text="Level two once you reach 20 lives"
                        TextColor="Gainsboro"
                        HorizontalOptions="Center"/>
-                <Label Text="Level One"
+                    <Label Text="Level One"
                        FontSize="Large"
                        TextColor="White"
                        HorizontalOptions="Center"
                        FontAttributes="Bold"/>
-            </StackLayout>
-            <StackLayout HorizontalOptions="Center">
-                <Label Margin="100,0,100,0"
+                </StackLayout>
+                
+                <!-- random numbers generated below -->
+                <StackLayout HorizontalOptions="Center">
+                    <Label Margin="100,0,100,0"
                        x:Name="numDisplay"
                        FontSize="150"
                        Text="0"/>
-            </StackLayout>
+                </StackLayout>
 
-            <StackLayout HorizontalOptions="CenterAndExpand"
+                <!-- higher or lower choice buttons -->
+                <StackLayout HorizontalOptions="CenterAndExpand"
                          VerticalOptions="CenterAndExpand"
                          Orientation="Horizontal">
-                <Button x:Name="higherBtn"
+                    <Button x:Name="higherBtn"
                         Text="Higher"
                         HeightRequest="100"
                         WidthRequest="150"
@@ -42,7 +47,7 @@
                         CornerRadius="15"
                         FontSize="Large"
                         Clicked="higherBtn_Clicked"/>
-                <Button x:Name="lowerBtn"
+                    <Button x:Name="lowerBtn"
                         Text="Lower" 
                         HeightRequest="100"
                         WidthRequest="150"
@@ -51,34 +56,35 @@
                          CornerRadius="15"
                         FontSize="Large"
                         Clicked="lowerBtn_Clicked"/>
-            </StackLayout>
-            <StackLayout HorizontalOptions="Center"
+                </StackLayout>
+                
+                <!-- lives and redo button -->
+                <StackLayout HorizontalOptions="Center"
                          VerticalOptions="Center">
-                <Label Text=""
+                    <Label Text=""
                    TextColor="White"
                    FontSize="50"
                    FontAttributes="Bold"
                    x:Name="statusLbl"/>
-                <StackLayout Orientation="Horizontal"
+                    <StackLayout Orientation="Horizontal"
                              HorizontalOptions="Center">
-                    <Label Text="Lives: 5"
+                        <Label Text="Lives: 5"
                            FontSize="25"
                            VerticalOptions="Start"
                            HorizontalOptions="Center"
                            FontAttributes="Bold"
                            TextColor="White"
                            x:Name="scoreLbl"/>
-                    <Button Text="Redo"
+                        <Button Text="Redo"
                             BackgroundColor="Gray"
                             TextColor="White"
                             x:Name="redoBtn"
                             Clicked="redoBtn_Clicked"
                             BorderColor="White"
                             CornerRadius="10"/>
+                    </StackLayout>
                 </StackLayout>
-                
             </StackLayout>
-           
-        </StackLayout>
-    </ContentPage.Content>
+        </AbsoluteLayout>
+    </ContentPage.Content> 
 </ContentPage>

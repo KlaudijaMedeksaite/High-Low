@@ -3,26 +3,27 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HigherLower.GameOver"
              BackgroundColor="LightSalmon">
+    <!-- game over page -->
     <ContentPage.Content>
         <StackLayout VerticalOptions="Center"
                      HorizontalOptions="Center">
             <Label Text="GAME OVER"
                    FontSize="100"
-                   Margin="20,0,20,0"/>
+                   Margin="50,50,0,50"/>
+            <!-- button to start again -->
             <Button x:Name="tryAgnBtn"
                     Clicked="tryAgnBtn_Clicked"
-                    Text="Try again"
-                    HeightRequest="100"
-                    WidthRequest="130"
+                    Text="Try again"                    
+                    HorizontalOptions="CenterAndExpand"
                     BorderColor="AntiqueWhite"
                     BackgroundColor="AliceBlue"
                     CornerRadius="15"
                     FontSize="Large"/>
+            <!-- button to go back to main page -->
             <Button x:Name="bckToMenBtn"
                     Clicked="bckToMenBtn_Clicked"
                     Text="Back to Menu"
-                    HeightRequest="100"
-                    WidthRequest="130"
+                    HorizontalOptions="CenterAndExpand"
                     BorderColor="AntiqueWhite"
                     BackgroundColor="AliceBlue"
                     CornerRadius="15"

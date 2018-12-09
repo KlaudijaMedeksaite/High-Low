@@ -2,13 +2,14 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HigherLower.youWin">
+    <!-- Winner page -->
     <ContentPage.Content>
         <StackLayout VerticalOptions="Center"
                      HorizontalOptions="Center">
-            
             <Label Text="WINNER"
                    FontSize="100"
                    Margin="20,0,20,0"/>
+            <!-- start over button -->
             <Button x:Name="tryAgnBtn"
                     Clicked="tryAgnBtn_Clicked"
                     Text="Try again"
@@ -18,6 +19,7 @@
                     BackgroundColor="AliceBlue"
                     CornerRadius="15"
                     FontSize="Large"/>
+            <!-- back to menu button-->
             <Button x:Name="bckToMenBtn"
                     Clicked="bckToMenBtn_Clicked"
                     Text="Back to Menu"

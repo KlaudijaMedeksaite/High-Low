@@ -14,18 +14,23 @@ namespace HigherLower
 	{
         int score = 5;
 
+        // first number generated on start up of level one page
         public Page1 ()
 		{
             InitializeComponent ();
             randomNumber();
         }
 
+        //when the higher button is clicked
         private void higherBtn_Clicked(object sender, EventArgs e)
         {
+            int newNum;
             int lastNum = int.Parse(numDisplay.Text);
-
-            randomNumber();
-            int newNum = int.Parse(numDisplay.Text);
+            do
+            {
+                randomNumber();
+                newNum = int.Parse(numDisplay.Text);
+            } while (newNum == lastNum);
 
             if (newNum > lastNum)
             {
@@ -33,11 +38,6 @@ namespace HigherLower
                 score++;
                 scoreLbl.Text = "Lives: " + score.ToString();
             }
-            else if(newNum == lastNum)
-            {
-                statusLbl.Text = "Go Again";
-                scoreLbl.Text = "Lives: " + score.ToString();
-            }
             else
             {
                 statusLbl.Text = "You lose";
@@ -55,25 +55,24 @@ namespace HigherLower
             }
         }
 
+        //when the lower button is clicked
         private void lowerBtn_Clicked(object sender, EventArgs e)
         {
+            int newNum;
             int lastNum = int.Parse(numDisplay.Text);
+            do
+            {
+                randomNumber();
+                newNum = int.Parse(numDisplay.Text);
+            } while (newNum == lastNum);
 
-            randomNumber();
-            int newNum = int.Parse(numDisplay.Text);
-
-            if(newNum < lastNum)
+            if (newNum < lastNum)
             {
                 statusLbl.Text = "You win";
                 score++;
                 scoreLbl.Text = "Lives: " + score.ToString();
 
             }
-            else if (newNum == lastNum)
-            {
-                statusLbl.Text = "Go Again";
-                scoreLbl.Text = "Lives: " + score.ToString();
-            }
             else
             {
                 statusLbl.Text = "You lose";
@@ -89,13 +88,15 @@ namespace HigherLower
                 Navigation.PushAsync(new Page2());
             }
         }
+
+        //random number generator
         private void randomNumber()
         {
-            //random number
             Random generator = new Random();
             numDisplay.Text = generator.Next(0, 21).ToString();
         }
 
+        //redo button
         private void redoBtn_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new Page1());
